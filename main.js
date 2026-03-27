@@ -26,6 +26,21 @@ document.addEventListener('DOMContentLoaded', () => {
                         <i class="fas fa-shopping-bag"></i>
                     </button>
                 </div>
+
+                // --- Interactive Logic ---
+    window.triggerToast = (msg) => {
+        document.getElementById('toastMsg').innerText = msg;
+        toast.style.transform = "translateX(0)";
+        setTimeout(() => toast.style.transform = "translateX(150%)", 3000);
+    };
+
+    window.handleLike = (btn) => {
+        btn.classList.toggle('liked');
+        currentWishlist = btn.classList.contains('liked') ? currentWishlist + 1 : currentWishlist - 1;
+        wishlistIcon.innerText = currentWishlist;
+        if(btn.classList.contains('liked')) triggerToast("Saved to Favorites!");
+    };
+
             </div>
         `).join('');
     }

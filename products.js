@@ -5,3 +5,8 @@ const products = [
     { id: 4, name: "Premium Leather Boots", category: "Fashion", price: 140, rating: 5, img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800" },
     { id: 5, name: "Aesthetic Ceramic Set", category: "Home", price: 120, rating: 3, img: "https://images.unsplash.com/photo-1581783898377-1c85bf937427?w=800" },
     { id: 6, name: "Modern Code Secrets", category: "Books", price: 55, rating: 5, img: "https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?w=800" },
+    { id: 7, name: "Wireless Gaming Mouse", category: "Electronics", price: 79, rating: 4, img: "https://images.unsplash.com/photo-1527664557558-a2b352fc3705?w=800" },
+    { id: 8, name: "Designer Trench Coat", category: "Fashion", price: 210, rating: 4, img: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800" },
+    { id: 9, name: "Smart Air Purifier", category: "Home", price: 280, rating: 5, img: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800" },
+    { id: 10, name: "History of Design", category: "Books", price: 42, rating: 4, img: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=800" }
+];

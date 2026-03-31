@@ -44,3 +44,23 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `).join('');
     }
+
+    // --- Filtering & Sorting ---
+    const filterProducts = () => {
+        let activeCat = document.querySelector('.cat-item.active').dataset.cat;
+        let query = document.getElementById('searchInput').value.toLowerCase();
+        let sortValue = document.getElementById('sortPrice').value;
+
+        let filtered = products.filter(p => {
+            const matchCat = activeCat === 'all' || p.category === activeCat;
+            const matchSearch = p.name.toLowerCase().includes(query);
+            const matchRating = p.rating >= minRating;
+            return matchCat && matchSearch && matchRating;
+        });
+
+        if(sortValue === 'low-high') filtered.sort((a,b) => a.price - b.price);
+        if(sortValue === 'high-low') filtered.sort((a,b) => b.price - a.price);
+
+        render(filtered);
+    };
+
